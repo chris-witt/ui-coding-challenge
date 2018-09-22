@@ -72,7 +72,9 @@ export class CalendarDisplayComponent implements OnInit {
 
   }
 
-  ngOnInit() {
-  }
+  ngOnInit() { }
 
+  isWeekend(date: Date) {
+    return date.getDay() === 0 || date.getDay() === 6;
+  }
 }

@@ -24,7 +24,7 @@
     </div>
   </div>
   <div class="row week" *ngFor="let weekModel of monthModel.weeks">
-    <div class="col-sm day" *ngFor="let day of weekModel;">
+    <div class="col-sm day" *ngFor="let day of weekModel;" [ngClass]="{'alert-warning': !day.empty && isWeekend(day.date)}">
       <span class="date" *ngIf="!day.empty">{{day.date.getDate()}}</span>
     </div>
   </div>
