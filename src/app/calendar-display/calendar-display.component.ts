@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-calendar-display',
@@ -6,11 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./calendar-display.component.css']
 })
 export class CalendarDisplayComponent implements OnInit {
-  calendarModel: any;
+  @Input() calendarModel: Array<any>;
 
   constructor() {
 
-    this.calendarModel = [
+    /* this.calendarModel = [
         {
           month: 'September',
           year: 2018,
@@ -68,7 +68,7 @@ export class CalendarDisplayComponent implements OnInit {
             ],
           ]
         }
-      ];
+      ]; */
 
   }
 
