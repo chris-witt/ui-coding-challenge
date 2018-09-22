@@ -15,10 +15,36 @@ export class CalendarDisplayComponent implements OnInit {
   isWeekend(date: Date) {
     return date.getDay() === 0 || date.getDay() === 6;
   }
+
+  // found this on stack overflow
+  getEaster(year) {
+    const f = Math.floor,
+      // Golden Number - 1
+      G = year % 19,
+      C = f(year / 100),
+      // related to Epact
+      H = (C - f(C / 4) - f((8 * C + 13) / 25) + 19 * G + 15) % 30,
+      // number of days from 21 March to the Paschal full moon
+      I = H - f(H / 28) * (1 - f(29 / (H + 1)) * f((21 - G) / 11)),
+      // weekday for the Paschal full moon
+      J = (year + f(year / 4) + I + 2 - C + f(C / 4)) % 7,
+      // number of days from 21 March to the Sunday on or before the Paschal full moon
+      L = I - J,
+      month = 3 + f((L + 40) / 44),
+      date = L + 28 - 31 * f(month / 4);
+
+    return {month, date};
+  }
+
+  // converted from PHP code found on stack overflow
+  // easter part was missing & columbus day was incorrect
   isHoliday(testDate: Date) {
     const month = testDate.getMonth();
     const date = testDate.getDate();
     const day = testDate.getDay();
+    const easter = this.getEaster(testDate.getFullYear());
+    // Easter
+    if ((month === easter.month) && (date === easter.date)) { return 'Easter Sunday'; }
     // January
     if ((month === 0) && (date === 1)) { return 'New Year\'s Day'; }
     if ((month === 0) && (date === 15)) { return 'Adults Day (Japan)'; }
