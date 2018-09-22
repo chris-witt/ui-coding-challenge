@@ -12,6 +12,8 @@ export class CalendarDisplayComponent implements OnInit {
 
     this.calendarModel = [
         {
+          month: 'September',
+          year: 2018,
           weeks: [
             { days: [ new Date('9/22/2018'), ] },
             { days: [ new Date('9/23/2018'),
