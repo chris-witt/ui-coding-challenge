@@ -18,3 +18,13 @@
 .calendar .week:last-child .day {
   border-bottom-width: 1px;
 }
+
+.calendar .week .day .date {
+  position: absolute;
+  display: block;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  padding: 10px 10px 3px 0px;
+  text-align: right;
+}
