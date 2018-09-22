@@ -37,3 +37,7 @@
   width: 100%;
   padding: 10px 10px 3px 0px;
 }
+
+.calendar .header .day h1, .calendar h1 {
+  text-align: center;
+}
