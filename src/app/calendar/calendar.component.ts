@@ -12,4 +12,7 @@ export class CalendarComponent implements OnInit {
   ngOnInit() {
   }
 
+  formSubmitted(formValues) {
+    console.log(formValues);
+  }
 }
