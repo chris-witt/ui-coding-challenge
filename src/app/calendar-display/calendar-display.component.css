@@ -2,6 +2,7 @@
   border: 1px solid black;
   border-right-width: 0px;
   border-bottom-width: 0px;
+  width: 14.2857142857%;
 }
 
 .calendar .week .day:last-child, .calendar .header .day:last-child {
@@ -13,6 +14,7 @@
   border-right-width: 0px;
   border-bottom-width: 0px;
   min-height: 120px;
+  width: 14.2857142857%;
 }
 
 .calendar .week:last-child .day {

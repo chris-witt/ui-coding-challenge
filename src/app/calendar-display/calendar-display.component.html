@@ -1,30 +1,30 @@
 <div class="calendar" *ngFor="let monthModel of calendarModel">
   <h1>{{monthModel.month}} of {{monthModel.year}}</h1>
   <div class="row header">
-    <div class="col-sm day">
+    <div class="col day">
       <h1>S</h1>
     </div>
-    <div class="col-sm day">
+    <div class="col day">
       <h1>M</h1>
     </div>
-    <div class="col-sm day">
+    <div class="col day">
       <h1>T</h1>
     </div>
-    <div class="col-sm day">
+    <div class="col day">
       <h1>W</h1>
     </div>
-    <div class="col-sm day">
+    <div class="col day">
       <h1>T</h1>
     </div>
-    <div class="col-sm day">
+    <div class="col day">
       <h1>F</h1>
     </div>
-    <div class="col-sm day">
+    <div class="col day">
       <h1>S</h1>
     </div>
   </div>
   <div class="row week" *ngFor="let weekModel of monthModel.weeks">
-    <div class="col-sm day" *ngFor="let day of weekModel;" [ngClass]="{'alert-dark': day.empty, 'alert-warning': !day.empty && isWeekend(day.date), 'alert-success': !day.empty && !isWeekend(day.date)}">
+    <div class="col day" *ngFor="let day of weekModel;" [ngClass]="{'alert-dark': day.empty, 'alert-warning': !day.empty && isWeekend(day.date), 'alert-success': !day.empty && !isWeekend(day.date)}">
       <span class="holiday badge-info" *ngIf="!day.empty && isHoliday(day.date)">{{isHoliday(day.date)}}</span>
       <span class="date" *ngIf="!day.empty">{{day.date.getDate()}}</span>
     </div>
