@@ -1,0 +1,20 @@
+.calendar .header .day {
+  border: 1px solid black;
+  border-right-width: 0px;
+  border-bottom-width: 0px;
+}
+
+.calendar .week .day:last-child, .calendar .header .day:last-child {
+  border-right-width: 1px;
+}
+
+.calendar .week .day {
+  border: 1px solid black;
+  border-right-width: 0px;
+  border-bottom-width: 0px;
+  min-height: 120px;
+}
+
+.calendar .week:last-child .day {
+  border-bottom-width: 1px;
+}
