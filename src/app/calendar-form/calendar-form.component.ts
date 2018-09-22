@@ -7,6 +7,9 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class CalendarFormComponent implements OnInit {
   @Output() submitted: EventEmitter<any> = new EventEmitter<any>();
+  startDate: Date;
+  numberOfDays: number;
+  countryCode: string;
 
   constructor() { }
   ngOnInit() { }
