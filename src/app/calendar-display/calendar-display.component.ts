@@ -15,4 +15,7 @@ export class CalendarDisplayComponent implements OnInit {
   isWeekend(date: Date) {
     return date.getDay() === 0 || date.getDay() === 6;
   }
+  isHoliday(testDate: Date) {
+    return false;
+  }
 }

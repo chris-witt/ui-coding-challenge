@@ -28,3 +28,12 @@
   padding: 10px 10px 3px 0px;
   text-align: right;
 }
+
+.calendar .week .day .holiday {
+  position: absolute;
+  display: block;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  padding: 10px 10px 3px 0px;
+}
