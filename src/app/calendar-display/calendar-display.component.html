@@ -1,4 +1,4 @@
-<div class="calendar">
+<div class="calendar" *ngFor="let monthModel of calendarModel">
   <h1>MONTH of YEAR</h1>
   <div class="row header">
     <div class="col-sm day">
@@ -23,99 +23,7 @@
       <h1>S</h1>
     </div>
   </div>
-  <div class="row week">
-    <div class="col-sm day">
-      <span class="date">DATE</span>
-    </div>
-    <div class="col-sm day">
-      <span class="date">DATE</span>
-    </div>
-    <div class="col-sm day">
-      <span class="date">DATE</span>
-    </div>
-    <div class="col-sm day">
-      <span class="date">DATE</span>
-    </div>
-    <div class="col-sm day">
-      <span class="date">DATE</span>
-    </div>
-    <div class="col-sm day">
-      <span class="date">DATE</span>
-    </div>
-    <div class="col-sm day">
-      <span class="date">DATE</span>
-    </div>
-  </div>
-  <div class="row week">
-    <div class="col-sm day">
-      <span class="date">DATE</span>
-    </div>
-    <div class="col-sm day">
-      <span class="date">DATE</span>
-    </div>
-    <div class="col-sm day">
-      <span class="date">DATE</span>
-    </div>
-    <div class="col-sm day">
-      <span class="date">DATE</span>
-    </div>
-    <div class="col-sm day">
-      <span class="date">DATE</span>
-    </div>
-    <div class="col-sm day">
-      <span class="date">DATE</span>
-    </div>
-    <div class="col-sm day">
-      <span class="date">DATE</span>
-    </div>
-  </div>
-  <div class="row week">
-    <div class="col-sm day">
-      <span class="date">DATE</span>
-    </div>
-    <div class="col-sm day">
-      <span class="date">DATE</span>
-    </div>
-    <div class="col-sm day">
-      <span class="date">DATE</span>
-    </div>
-    <div class="col-sm day">
-      <span class="date">DATE</span>
-    </div>
-    <div class="col-sm day">
-      <span class="date">DATE</span>
-    </div>
-    <div class="col-sm day">
-      <span class="date">DATE</span>
-    </div>
-    <div class="col-sm day">
-      <span class="date">DATE</span>
-    </div>
-  </div>
-  <div class="row week">
-    <div class="col-sm day">
-      <span class="date">DATE</span>
-    </div>
-    <div class="col-sm day">
-      <span class="date">DATE</span>
-    </div>
-    <div class="col-sm day">
-      <span class="date">DATE</span>
-    </div>
-    <div class="col-sm day">
-      <span class="date">DATE</span>
-    </div>
-    <div class="col-sm day">
-      <span class="date">DATE</span>
-    </div>
-    <div class="col-sm day">
-      <span class="date">DATE</span>
-    </div>
-    <div class="col-sm day">
-      <span class="date">DATE</span>
-    </div>
-  </div>
-  <div class="row week">
+  <div class="row week" *ngFor="let weekModel of monthModel.weeks">
     <div class="col-sm day">
       <span class="date">DATE</span>
     </div>
