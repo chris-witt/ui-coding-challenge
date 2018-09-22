@@ -24,25 +24,7 @@
     </div>
   </div>
   <div class="row week" *ngFor="let weekModel of monthModel.weeks">
-    <div class="col-sm day">
-      <span class="date">DATE</span>
-    </div>
-    <div class="col-sm day">
-      <span class="date">DATE</span>
-    </div>
-    <div class="col-sm day">
-      <span class="date">DATE</span>
-    </div>
-    <div class="col-sm day">
-      <span class="date">DATE</span>
-    </div>
-    <div class="col-sm day">
-      <span class="date">DATE</span>
-    </div>
-    <div class="col-sm day">
-      <span class="date">DATE</span>
-    </div>
-    <div class="col-sm day">
+    <div class="col-sm day" *ngFor="let day of weekModel.days;">
       <span class="date">DATE</span>
     </div>
   </div>
